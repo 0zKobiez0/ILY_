@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lời Chúc Đặc Biệt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Nunito', sans-serif;
+            background-color: #ffebf0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, p {
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 2s forwards;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #e91e63;
+            animation-delay: 0.5s;
+        }
+
+        p {
+            font-size: 1.8em;
+            color: #ff4081;
+            animation: shake 0.8s infinite alternate;
+            animation-delay: 1.5s;
+        }
+
+        img {
+            width: 300px;
+            height: auto;
+            margin-top: 20px;
+            opacity: 0;
+            transform: scale(0.5);
+            animation: zoomIn 1.5s forwards;
+            animation-delay: 2.5s;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes shake {
+            from {
+                transform: rotate(-3deg);
+            }
+            to {
+                transform: rotate(3deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="greeting"></h1>
+    <p id="wish"></p>
+    <img id="image" alt="Hình ảnh yêu thương">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const data = {
+                "name": "ily",
+                "greetingText": "💖 CHÚC BÉ IU MỘT NGÀY TỐT LÀNH 💖",
+                "wishText": "💞 ANH YÊU EM 💞",
+                "imagePath": "https://i.postimg.cc/wjCkmx00/IMG-2621.png"
+            };
+
+            document.getElementById("greeting").innerText = data.greetingText;
+            document.getElementById("wish").innerText = data.wishText;
+            document.getElementById("image").src = data.imagePath;
+        });
+    </script>
+
+</body>
+</html>
