@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YOU ARE MY SPECIAL</title>
+    <title>~YOU ARE MY SPECIAL~</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -24,6 +24,15 @@
             font-size: 2.5em;
             color: #e91e63;
             animation-delay: 0.5s;
+        }
+
+        #love-text {
+            font-size: 1.5em;
+            color: #ff4081;
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: fadeIn 2s forwards;
+            animation-delay: 1s;
         }
 
         p {
@@ -72,8 +81,9 @@
 <body>
 
     <h1 id="greeting"></h1>
+    <div id="love-text">💞 ANH YÊU EM! 💞</div>
     <p id="wish"></p>
-    <img id="image" alt="Hình ảnh yêu thương">
+    <img id="image" alt="cuteeeeeeeee">
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
